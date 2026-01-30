@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "name": "Get scan history",
+      "method": "GET",
+      "queryParams": {
+        "user_id": "1"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "scans": "array",
+        "total_scans": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

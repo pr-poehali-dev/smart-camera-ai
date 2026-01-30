@@ -1,0 +1,33 @@
+{
+  "tests": [
+    {
+      "name": "Register new user",
+      "method": "POST",
+      "body": {
+        "phone": "+79991234567",
+        "first_name": "Иван",
+        "last_name": "Тестов"
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "user_id": "number",
+        "phone": "+79991234567",
+        "message": "Регистрация успешна"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Login existing user",
+      "method": "POST",
+      "body": {
+        "phone": "+79991234567"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "phone": "+79991234567",
+        "message": "Вход выполнен"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

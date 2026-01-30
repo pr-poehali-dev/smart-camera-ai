@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Get Yandex auth URL",
+      "method": "GET",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "auth_url": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
